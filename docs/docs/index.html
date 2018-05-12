@@ -1,156 +1,21 @@
-<!DOCTYPE html><html lang="en"><head><title>HumdrumUI</title><link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Source+Sans+Pro:400,700" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/css/index.css"><link rel="stylesheet" type="text/css" href="/css/docs.css"><script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script><script src="/js/index.js"></script></head><body><header class="site"><h1 class="logo"><img src="/img/hd-logo.svg" alt="HumdrumUI"></h1><h2>A simple CSS library.</h2><div>Download <a href="https://github.com/GarthDB/humdrum-ui/releases/latest">latest release.</a></div></header><input class="hd-nav__checkbox" id="menuCheckbox" type="checkbox"><nav class="hd-nav"><label for="menuCheckbox"><header class="hd-nav__hamburger" id="nav-expander"><svg class="hd-nav__hamburger-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 18 18" enable-background="new 0 0 18 18" width="18" height="18"><rect x="1" y="3" width="16" height="2"></rect><rect x="1" y="8" width="16" height="2"></rect><rect x="1" y="13" width="16" height="2"></rect></svg><span>Menu</span></header></label><ul class="hd-nav__list"><li class="hd-nav__item"><a class="hd-nav__link" href="/">Getting Started</a></li><li class="hd-nav__item"><a class="hd-nav__link" href="/docs/">Docs</a></li><li class="hd-nav__item"><a class="hd-nav__link" href="/example/">Example</a></li></ul></nav><main class="site"><div class="components"><div class="component"><h2>Colors</h2><div class="details">Color variables/swatches.</div><div class="component-demo"><div>
-  <div class="swatch swatch--primary-color"></div>
-  <div>$primary-color</div>
-</div>
-<div>
-  <div class="swatch swatch--complementary-color"></div>
-  <div>$complementary-color</div>
-</div>
-<div>
-  <div class="swatch swatch--analogous-color"></div>
-  <div>$analogous-color</div>
-</div>
-<div>
-  <div class="swatch swatch--complementary-analogous"></div>
-  <div>$complementary-analogous</div>
-</div>
-<div>
-  <div class="swatch swatch--complementary-neutral"></div>
-  <div>$complementary-neutral</div>
-</div>
-<div>
-  <div class="swatch swatch--complementary-neutral-light"></div>
-  <div>$complementary-neutral-light</div>
-</div>
-<div>
-  <div class="swatch swatch--complementary-neutral-dark"></div>
-  <div>$complementary-neutral-dark</div>
-</div>
-<div>
-  <div class="swatch swatch--primary-neutral"></div>
-  <div>$primary-neutral</div>
-</div>
-<div>
-  <div class="swatch swatch--primary-neutral-light"></div>
-  <div>$primary-neutral-light</div>
-</div>
-<div>
-  <div class="swatch swatch--primary-neutral-dark"></div>
-  <div>$primary-neutral-dark</div>
-</div>
-<div>
-  <div class="swatch swatch--primary-light"></div>
-  <div>$primary-light</div>
-</div>
-<div>
-  <div class="swatch swatch--primary-dark"></div>
-  <div>$primary-dark</div>
-</div>
-<div>
-  <div class="swatch swatch--complementary-light"></div>
-  <div>$complementary-light</div>
-</div>
-<div>
-  <div class="swatch swatch--neutral-gray"></div>
-  <div>$neutral-gray</div>
-</div>
-<div>
-  <div class="swatch swatch--complementary-gray"></div>
-  <div>$complementary-gray</div>
-</div>
-</div><div class="toggleCodeSnippet"><a href="#">Show markup</a></div><pre class="prettyprint closed">&lt;div&gt;
-  &lt;div class=&quot;swatch swatch--primary-color&quot;&gt;&lt;/div&gt;
-  &lt;div&gt;$primary-color&lt;/div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;div class=&quot;swatch swatch--complementary-color&quot;&gt;&lt;/div&gt;
-  &lt;div&gt;$complementary-color&lt;/div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;div class=&quot;swatch swatch--analogous-color&quot;&gt;&lt;/div&gt;
-  &lt;div&gt;$analogous-color&lt;/div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;div class=&quot;swatch swatch--complementary-analogous&quot;&gt;&lt;/div&gt;
-  &lt;div&gt;$complementary-analogous&lt;/div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;div class=&quot;swatch swatch--complementary-neutral&quot;&gt;&lt;/div&gt;
-  &lt;div&gt;$complementary-neutral&lt;/div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;div class=&quot;swatch swatch--complementary-neutral-light&quot;&gt;&lt;/div&gt;
-  &lt;div&gt;$complementary-neutral-light&lt;/div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;div class=&quot;swatch swatch--complementary-neutral-dark&quot;&gt;&lt;/div&gt;
-  &lt;div&gt;$complementary-neutral-dark&lt;/div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;div class=&quot;swatch swatch--primary-neutral&quot;&gt;&lt;/div&gt;
-  &lt;div&gt;$primary-neutral&lt;/div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;div class=&quot;swatch swatch--primary-neutral-light&quot;&gt;&lt;/div&gt;
-  &lt;div&gt;$primary-neutral-light&lt;/div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;div class=&quot;swatch swatch--primary-neutral-dark&quot;&gt;&lt;/div&gt;
-  &lt;div&gt;$primary-neutral-dark&lt;/div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;div class=&quot;swatch swatch--primary-light&quot;&gt;&lt;/div&gt;
-  &lt;div&gt;$primary-light&lt;/div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;div class=&quot;swatch swatch--primary-dark&quot;&gt;&lt;/div&gt;
-  &lt;div&gt;$primary-dark&lt;/div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;div class=&quot;swatch swatch--complementary-light&quot;&gt;&lt;/div&gt;
-  &lt;div&gt;$complementary-light&lt;/div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;div class=&quot;swatch swatch--neutral-gray&quot;&gt;&lt;/div&gt;
-  &lt;div&gt;$neutral-gray&lt;/div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;div class=&quot;swatch swatch--complementary-gray&quot;&gt;&lt;/div&gt;
-  &lt;div&gt;$complementary-gray&lt;/div&gt;
-&lt;/div&gt;
-</pre><div class="toggleCodeSnippet"><a href="#">Show CSS</a></div><pre class="prettyprint closed">.swatch--primary-color {
-  background: #e3791c;
-}.swatch--complementary-color {
-  background: #3b84c4;
-}.swatch--analogous-color {
-  background: #3bc4a9;
-}.swatch--complementary-analogous {
-  background: #3baeb2;
-}.swatch--complementary-neutral {
-  background: #5f82a0;
-}.swatch--complementary-neutral-light {
-  background: #c9d5df;
-}.swatch--complementary-neutral-dark {
-  background: #202c36;
-}.swatch--primary-neutral {
-  background: #b57c4a;
-}.swatch--primary-neutral-light {
-  background: #e6d2c1;
-}.swatch--primary-neutral-dark {
-  background: #3e2a19;
-}.swatch--primary-light {
-  background: #e4a166;
-}.swatch--primary-dark {
-  background: #99561b;
-}.swatch--complementary-light {
-  background: #7ba8d0;
-}.swatch--white {
-  background: #fcfaf8;
-}.swatch--neutral-gray {
-  background: gray;
-}.swatch--complementary-gray {
-  background: #798086;
-}</pre></div><div class="component"><h2>Typography</h2><div class="details">Basic typography for the UI Kit</div><div class="component-demo"></div><div class="toggleCodeSnippet"><a href="#">Show markup</a></div><pre class="prettyprint closed"></pre><div class="toggleCodeSnippet"><a href="#">Show CSS</a></div><pre class="prettyprint closed">:root {
+<!DOCTYPE html><html lang="en"><head><title>HumdrumUI</title><link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Source+Sans+Pro:400,700" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/css/index.css"><link rel="stylesheet" type="text/css" href="/css/docs.css"><script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script><script src="/js/index.js"></script><meta name="viewport" content="width=device-width, initial-scale=1"></head><body><header class="site"><h1 class="logo"><img src="/img/hd-logo.svg" alt="HumdrumUI"></h1><h2>A simple CSS library.</h2><div>Download <a href="https://github.com/GarthDB/humdrum-ui/releases/latest">latest release.</a></div></header><input class="hd-nav__checkbox" id="menuCheckbox" type="checkbox"><nav class="hd-nav"><label for="menuCheckbox"><header class="hd-nav__hamburger" id="nav-expander"><svg class="hd-nav__hamburger-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 18 18" enable-background="new 0 0 18 18" width="18" height="18"><rect x="1" y="3" width="16" height="2"></rect><rect x="1" y="8" width="16" height="2"></rect><rect x="1" y="13" width="16" height="2"></rect></svg><span>Menu</span></header></label><ul class="hd-nav__list"><li class="hd-nav__item"><a class="hd-nav__link" href="/">Getting Started</a></li><li class="hd-nav__item"><a class="hd-nav__link" href="/docs/">Docs</a></li><li class="hd-nav__item"><a class="hd-nav__link" href="/example/">Example</a></li></ul></nav><main class="site"><div class="components"><div class="component"><h2>Typography</h2><h3>Description</h3><div class="details"><p>Basic responsive typography.</p>
+<p>There are two typography breakpoints at <code>400px</code> and <code>740px</code> view-width;</p>
+<p>There are two expected font families</p>
+<ul>
+  <li><strong>serif</strong>: 'Roboto Slab', serif</li>
+  <li><strong>sans-serif</strong>: 'Source Sans Pro', sans-serif</li>
+</ul>
+<p>Add the Google Font include <code>&lt;link&gt;</code> tag to the <code>&lt;head&gt;</code> in your project.
+  <pre class="prettyprint">&lt;link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Source+Sans+Pro:400,700" rel="stylesheet"&gt;</pre></p>
+</div><h3>Example</h3><div class="component-demo"><h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<p>Body</p>
+</div><h3>Code</h3><div class="toggleCodeSnippet"><a href="#">Show markup</a></div><pre class="prettyprint closed">&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;p&gt;Body&lt;/p&gt;
+</pre><div class="toggleCodeSnippet"><a href="#">Show CSS</a></div><pre class="prettyprint closed">:root {
   font-size: 100%;
 }@media only screen and (min-width: 740px) {
   :root {
@@ -213,7 +78,176 @@
 }body {
     font-size: 1rem;
     line-height: 1.375;
-  }</pre></div><div class="component"><h2>Grid</h2><div class="details">Responsive Grid</div><div class="component-demo"><div class="hd-grid">
+  }</pre></div><div class="component"><h2>Colors</h2><h3>Description</h3><div class="details">Color variables/swatches. These colors are available as Sass variables that can be imported to use in your projects.</div><h3>Example</h3><div class="component-demo"><div class="hd-grid swatches">
+  <div class="swatch-container hd-grid__2col">
+    <div class="swatch swatch--primary-color"></div>
+    <div><code>$primary-color</code></div>
+  </div>
+  <div class="swatch-container hd-grid__2col">
+    <div class="swatch swatch--complementary-color"></div>
+    <div><code>$complementary-color</code></div>
+  </div>
+  <div class="swatch-container hd-grid__2col">
+    <div class="swatch swatch--analogous-color"></div>
+    <div><code>$analogous-color</code></div>
+  </div>
+  <div class="swatch-container hd-grid__2col">
+    <div class="swatch swatch--complementary-analogous"></div>
+    <div><code>$complementary-analogous</code></div>
+  </div>
+  <div class="swatch-container hd-grid__2col">
+    <div class="swatch swatch--complementary-neutral"></div>
+    <div><code>$complementary-neutral</code></div>
+  </div>
+  <div class="swatch-container hd-grid__2col">
+    <div class="swatch swatch--complementary-neutral-light"></div>
+    <div><code>$complementary-neutral-light</code></div>
+  </div>
+  <div class="swatch-container hd-grid__2col">
+    <div class="swatch swatch--complementary-neutral-dark"></div>
+    <div><code>$complementary-neutral-dark</code></div>
+  </div>
+  <div class="swatch-container hd-grid__2col">
+    <div class="swatch swatch--primary-neutral"></div>
+    <div><code>$primary-neutral</code></div>
+  </div>
+  <div class="swatch-container hd-grid__2col">
+    <div class="swatch swatch--primary-neutral-light"></div>
+    <div><code>$primary-neutral-light</code></div>
+  </div>
+  <div class="swatch-container hd-grid__2col">
+    <div class="swatch swatch--primary-neutral-dark"></div>
+    <div><code>$primary-neutral-dark</code></div>
+  </div>
+  <div class="swatch-container hd-grid__2col">
+    <div class="swatch swatch--primary-light"></div>
+    <div><code>$primary-light</code></div>
+  </div>
+  <div class="swatch-container hd-grid__2col">
+    <div class="swatch swatch--primary-dark"></div>
+    <div><code>$primary-dark</code></div>
+  </div>
+  <div class="swatch-container hd-grid__2col">
+    <div class="swatch swatch--complementary-light"></div>
+    <div><code>$complementary-light</code></div>
+  </div>
+  <div class="swatch-container hd-grid__2col">
+    <div class="swatch swatch--neutral-gray"></div>
+    <div><code>$neutral-gray</code></div>
+  </div>
+  <div class="swatch-container hd-grid__2col">
+    <div class="swatch swatch--complementary-gray"></div>
+    <div><code>$complementary-gray</code></div>
+  </div>
+</div>
+</div><h3>Code</h3><div class="toggleCodeSnippet"><a href="#">Show markup</a></div><pre class="prettyprint closed">&lt;div class=&quot;hd-grid swatches&quot;&gt;
+  &lt;div class=&quot;swatch-container hd-grid__2col&quot;&gt;
+    &lt;div class=&quot;swatch swatch--primary-color&quot;&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;code&gt;$primary-color&lt;/code&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;swatch-container hd-grid__2col&quot;&gt;
+    &lt;div class=&quot;swatch swatch--complementary-color&quot;&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;code&gt;$complementary-color&lt;/code&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;swatch-container hd-grid__2col&quot;&gt;
+    &lt;div class=&quot;swatch swatch--analogous-color&quot;&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;code&gt;$analogous-color&lt;/code&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;swatch-container hd-grid__2col&quot;&gt;
+    &lt;div class=&quot;swatch swatch--complementary-analogous&quot;&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;code&gt;$complementary-analogous&lt;/code&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;swatch-container hd-grid__2col&quot;&gt;
+    &lt;div class=&quot;swatch swatch--complementary-neutral&quot;&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;code&gt;$complementary-neutral&lt;/code&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;swatch-container hd-grid__2col&quot;&gt;
+    &lt;div class=&quot;swatch swatch--complementary-neutral-light&quot;&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;code&gt;$complementary-neutral-light&lt;/code&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;swatch-container hd-grid__2col&quot;&gt;
+    &lt;div class=&quot;swatch swatch--complementary-neutral-dark&quot;&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;code&gt;$complementary-neutral-dark&lt;/code&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;swatch-container hd-grid__2col&quot;&gt;
+    &lt;div class=&quot;swatch swatch--primary-neutral&quot;&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;code&gt;$primary-neutral&lt;/code&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;swatch-container hd-grid__2col&quot;&gt;
+    &lt;div class=&quot;swatch swatch--primary-neutral-light&quot;&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;code&gt;$primary-neutral-light&lt;/code&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;swatch-container hd-grid__2col&quot;&gt;
+    &lt;div class=&quot;swatch swatch--primary-neutral-dark&quot;&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;code&gt;$primary-neutral-dark&lt;/code&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;swatch-container hd-grid__2col&quot;&gt;
+    &lt;div class=&quot;swatch swatch--primary-light&quot;&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;code&gt;$primary-light&lt;/code&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;swatch-container hd-grid__2col&quot;&gt;
+    &lt;div class=&quot;swatch swatch--primary-dark&quot;&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;code&gt;$primary-dark&lt;/code&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;swatch-container hd-grid__2col&quot;&gt;
+    &lt;div class=&quot;swatch swatch--complementary-light&quot;&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;code&gt;$complementary-light&lt;/code&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;swatch-container hd-grid__2col&quot;&gt;
+    &lt;div class=&quot;swatch swatch--neutral-gray&quot;&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;code&gt;$neutral-gray&lt;/code&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;swatch-container hd-grid__2col&quot;&gt;
+    &lt;div class=&quot;swatch swatch--complementary-gray&quot;&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;code&gt;$complementary-gray&lt;/code&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre><div class="toggleCodeSnippet"><a href="#">Show CSS</a></div><pre class="prettyprint closed">.swatch--primary-color {
+  background: #e3791c;
+}.swatch--complementary-color {
+  background: #3b84c4;
+}.swatch--analogous-color {
+  background: #3bc4a9;
+}.swatch--complementary-analogous {
+  background: #3baeb2;
+}.swatch--complementary-neutral {
+  background: #5f82a0;
+}.swatch--complementary-neutral-light {
+  background: #c9d5df;
+}.swatch--complementary-neutral-dark {
+  background: #202c36;
+}.swatch--primary-neutral {
+  background: #b57c4a;
+}.swatch--primary-neutral-light {
+  background: #e6d2c1;
+}.swatch--primary-neutral-dark {
+  background: #3e2a19;
+}.swatch--primary-light {
+  background: #e4a166;
+}.swatch--primary-dark {
+  background: #99561b;
+}.swatch--complementary-light {
+  background: #7ba8d0;
+}.swatch--white {
+  background: #fcfaf8;
+}.swatch--neutral-gray {
+  background: gray;
+}.swatch--complementary-gray {
+  background: #798086;
+}</pre></div><div class="component"><h2>Grid</h2><h3>Description</h3><div class="details"><p>A simple 6-column, responsive grid.</p>
+<p>To use the grid, use the <code>.hd-grid</code> class on the container.</p>
+<pre class="prettyprint">&lt;div class="hd-grid"&gt;&lt;/div&gt;</pre>
+<p>Columns are defined using column classes:</p>
+<ul>
+  <li><code>.hd-grid__1col</code></li>
+  <li><code>.hd-grid__2col</code></li>
+  <li><code>.hd-grid__3col</code></li>
+  <li><code>.hd-grid__4col</code></li>
+  <li><code>.hd-grid__5col</code></li>
+  <li><code>.hd-grid__6col</code></li>
+</ul>
+<p>The grid uses two breakpoints by default. It will switch to a single column grid under <code>400px</code>, and larger height above <code>740px</code> view-width.</p>
+</div><h3>Example</h3><div class="component-demo"><div class="hd-grid">
   <div class="hd-grid__2col">Item 1</div>
   <div class="hd-grid__2col">Item 2</div>
   <div class="hd-grid__2col">Item 3</div>
@@ -222,7 +256,7 @@
   <div class="hd-grid__4col">Item 1</div>
   <div class="hd-grid__2col">Item 2</div>
 </div>
-</div><div class="toggleCodeSnippet"><a href="#">Show markup</a></div><pre class="prettyprint closed">&lt;div class=&quot;hd-grid&quot;&gt;
+</div><h3>Code</h3><div class="toggleCodeSnippet"><a href="#">Show markup</a></div><pre class="prettyprint closed">&lt;div class=&quot;hd-grid&quot;&gt;
   &lt;div class=&quot;hd-grid__2col&quot;&gt;Item 1&lt;/div&gt;
   &lt;div class=&quot;hd-grid__2col&quot;&gt;Item 2&lt;/div&gt;
   &lt;div class=&quot;hd-grid__2col&quot;&gt;Item 3&lt;/div&gt;
@@ -301,8 +335,15 @@
 }.hd-grid {
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: minmax(150px, auto);
-  }</pre></div><div class="component"><h2>Button</h2><div class="details">Basic button</div><div class="component-demo"><button class="hd-button">Click Me</button>
-</div><div class="toggleCodeSnippet"><a href="#">Show markup</a></div><pre class="prettyprint closed">&lt;button class=&quot;hd-button&quot;&gt;Click Me&lt;/button&gt;
+  }</pre></div><div class="component"><h2>Responsive Breakpoints</h2><h3>Description</h3><div class="details"><p>Typography and grid components are responsive that change depending on the browser width using CSS Media Queries.</p>
+<p>There are three breakpoints to use in your custom components, but only two breakpoints in use in the default components.</p>
+<ul>
+  <li><strong>small</strong>: 400px</li>
+  <li><strong>medium</strong>: 740px</li>
+  <li><strong>large</strong>: 1080px</li>
+</ul>
+</div></div><div class="component"><h2>Button</h2><h3>Description</h3><div class="details">Basic button</div><h3>Example</h3><div class="component-demo"><button class="hd-button">Click Me</button>
+</div><h3>Code</h3><div class="toggleCodeSnippet"><a href="#">Show markup</a></div><pre class="prettyprint closed">&lt;button class=&quot;hd-button&quot;&gt;Click Me&lt;/button&gt;
 </pre><div class="toggleCodeSnippet"><a href="#">Show CSS</a></div><pre class="prettyprint closed">.hd-button {
   color: #202c36;
   font-weight: 400;
@@ -333,13 +374,13 @@
   color: #e6d2c1;
 }.hd-button:focus {
   outline: none;
-}</pre></div><div class="component"><h2>List</h2><div class="details">Basic List</div><div class="component-demo"><ul class="hd-list-group">
+}</pre></div><div class="component"><h2>List</h2><h3>Description</h3><div class="details">Basic List</div><h3>Example</h3><div class="component-demo"><ul class="hd-list-group">
   <li class="hd-list-group__item">Item 1</li>
   <li class="hd-list-group__item">Item 2</li>
   <li class="hd-list-group__item">Another item</li>
   <li class="hd-list-group__item">Last item</li>
 </ul>
-</div><div class="toggleCodeSnippet"><a href="#">Show markup</a></div><pre class="prettyprint closed">&lt;ul class=&quot;hd-list-group&quot;&gt;
+</div><h3>Code</h3><div class="toggleCodeSnippet"><a href="#">Show markup</a></div><pre class="prettyprint closed">&lt;ul class=&quot;hd-list-group&quot;&gt;
   &lt;li class=&quot;hd-list-group__item&quot;&gt;Item 1&lt;/li&gt;
   &lt;li class=&quot;hd-list-group__item&quot;&gt;Item 2&lt;/li&gt;
   &lt;li class=&quot;hd-list-group__item&quot;&gt;Another item&lt;/li&gt;
@@ -356,7 +397,7 @@
   padding: 6px 20px;
 }.hd-list-group__item:last-child {
   border-bottom: none;
-}</pre></div><div class="component"><h2>Navigation</h2><div class="details">Site navigation</div><div class="component-demo"><input type="checkbox" id="menuCheckbox" class="hd-nav__checkbox">
+}</pre></div><div class="component"><h2>Navigation</h2><h3>Description</h3><div class="details">Site navigation</div><h3>Example</h3><div class="component-demo"><input type="checkbox" id="menuCheckbox" class="hd-nav__checkbox">
 <nav class="hd-nav">
   <label for="menuCheckbox">
     <header id="nav-expander" class="hd-nav__hamburger">
@@ -374,7 +415,7 @@
     <li class="hd-nav__item"><a class="hd-nav__link" href="#">Contact Us</a></li>
   </ul>
 </nav>
-</div><div class="toggleCodeSnippet"><a href="#">Show markup</a></div><pre class="prettyprint closed">&lt;input type=&quot;checkbox&quot; id=&quot;menuCheckbox&quot; class=&quot;hd-nav__checkbox&quot;&gt;
+</div><h3>Code</h3><div class="toggleCodeSnippet"><a href="#">Show markup</a></div><pre class="prettyprint closed">&lt;input type=&quot;checkbox&quot; id=&quot;menuCheckbox&quot; class=&quot;hd-nav__checkbox&quot;&gt;
 &lt;nav class=&quot;hd-nav&quot;&gt;
   &lt;label for=&quot;menuCheckbox&quot;&gt;
     &lt;header id=&quot;nav-expander&quot; class=&quot;hd-nav__hamburger&quot;&gt;

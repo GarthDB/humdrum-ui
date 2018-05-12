@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>HumdrumUI | Example</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Source+Sans+Pro:400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/index.css">
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> </head>
+  <style>
+    .site-nav{
+      border: none;
+      height: auto;
+    }
+  </style>
+<body>
+  <div class="hd-grid">
+    <header class="hd-grid__6col"><h1>The Best</h1></header>
+    <div class="hd-grid__6col site-nav"><input type="checkbox" id="menuCheckbox" class="hd-nav__checkbox">
+      <nav class="hd-nav">
+        <label for="menuCheckbox">
+          <header id="nav-expander" class="hd-nav__hamburger">
+            <svg class="hd-nav__hamburger-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" enable-background="new 0 0 18 18" width="18" height="18">
+              <rect x="1" y="3" width="16" height="2"/>
+              <rect x="1" y="8" width="16" height="2"/>
+              <rect x="1" y="13" width="16" height="2"/>
+            </svg>
+            <span>Menu</span>
+          </header>
+        </label>
+        <ul class="hd-nav__list">
+          <li class="hd-nav__item"><a class="hd-nav__link" href="#">Home</a></li>
+          <li class="hd-nav__item"><a class="hd-nav__link" href="#">FAQs</a></li>
+          <li class="hd-nav__item"><a class="hd-nav__link" href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="hd-grid__2col"></div>
+    <div class="hd-grid__4col"></div>
+    <footer class="hd-grid__6col"></footer>
+  </div>
+</body>
+
+</html>

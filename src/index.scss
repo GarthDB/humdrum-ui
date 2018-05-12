@@ -3,9 +3,20 @@
 @import 'helpers/mixins';
 @import 'helpers/variables';
 
-@import 'components/colors';
 @import 'components/typography';
+@import 'components/colors';
 @import 'components/grid';
+/* topdoc
+name: Responsive Breakpoints
+description: |
+  <p>Typography and grid components are responsive that change depending on the browser width using CSS Media Queries.</p>
+  <p>There are three breakpoints to use in your custom components, but only two breakpoints in use in the default components.</p>
+  <ul>
+    <li><strong>small</strong>: 400px</li>
+    <li><strong>medium</strong>: 740px</li>
+    <li><strong>large</strong>: 1080px</li>
+  </ul>
+*/
 @import 'components/button';
 @import 'components/list';
 @import 'components/nav';

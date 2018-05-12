@@ -1,6 +1,19 @@
 /* topdoc
 name: Grid
-description: Responsive Grid
+description: |
+  <p>A simple 6-column, responsive grid.</p>
+  <p>To use the grid, use the <code>.hd-grid</code> class on the container.</p>
+  <pre class="prettyprint">&lt;div class="hd-grid"&gt;&lt;/div&gt;</pre>
+  <p>Columns are defined using column classes:</p>
+  <ul>
+    <li><code>.hd-grid__1col</code></li>
+    <li><code>.hd-grid__2col</code></li>
+    <li><code>.hd-grid__3col</code></li>
+    <li><code>.hd-grid__4col</code></li>
+    <li><code>.hd-grid__5col</code></li>
+    <li><code>.hd-grid__6col</code></li>
+  </ul>
+  <p>The grid uses two breakpoints by default. It will switch to a single column grid under <code>400px</code>, and larger height above <code>740px</code> view-width.</p>
 markup: |
   <div class="hd-grid">
     <div class="hd-grid__2col">Item 1</div>

@@ -1,6 +1,20 @@
 /* topdoc
 name: Typography
-description: Basic typography for the UI Kit
+description: |
+  <p>Basic responsive typography.</p>
+  <p>There are two typography breakpoints at <code>400px</code> and <code>740px</code> view-width;</p>
+  <p>There are two expected font families</p>
+  <ul>
+    <li><strong>serif</strong>: 'Roboto Slab', serif</li>
+    <li><strong>sans-serif</strong>: 'Source Sans Pro', sans-serif</li>
+  </ul>
+  <p>Add the Google Font include <code>&lt;link&gt;</code> tag to the <code>&lt;head&gt;</code> in your project.
+    <pre class="prettyprint">&lt;link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Source+Sans+Pro:400,700" rel="stylesheet"&gt;</pre></p>
+markup: |
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <p>Body</p>
 */
 
 :root {

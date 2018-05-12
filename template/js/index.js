@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   var toggles = document.querySelectorAll('.toggleCodeSnippet a');
   for(var i = 0; i<toggles.length; i++) {
+    toggles[i].addEventListener("touchstart", toggleClickHandler, false);
     toggles[i].addEventListener("click", toggleClickHandler, false);
   }
 });

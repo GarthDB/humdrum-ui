@@ -1,135 +1,20 @@
 /* topdoc
-name: Colors
-description: Color variables/swatches.
-markup: |
-  <div>
-    <div class="swatch swatch--primary-color"></div>
-    <div>$primary-color</div>
-  </div>
-  <div>
-    <div class="swatch swatch--complementary-color"></div>
-    <div>$complementary-color</div>
-  </div>
-  <div>
-    <div class="swatch swatch--analogous-color"></div>
-    <div>$analogous-color</div>
-  </div>
-  <div>
-    <div class="swatch swatch--complementary-analogous"></div>
-    <div>$complementary-analogous</div>
-  </div>
-  <div>
-    <div class="swatch swatch--complementary-neutral"></div>
-    <div>$complementary-neutral</div>
-  </div>
-  <div>
-    <div class="swatch swatch--complementary-neutral-light"></div>
-    <div>$complementary-neutral-light</div>
-  </div>
-  <div>
-    <div class="swatch swatch--complementary-neutral-dark"></div>
-    <div>$complementary-neutral-dark</div>
-  </div>
-  <div>
-    <div class="swatch swatch--primary-neutral"></div>
-    <div>$primary-neutral</div>
-  </div>
-  <div>
-    <div class="swatch swatch--primary-neutral-light"></div>
-    <div>$primary-neutral-light</div>
-  </div>
-  <div>
-    <div class="swatch swatch--primary-neutral-dark"></div>
-    <div>$primary-neutral-dark</div>
-  </div>
-  <div>
-    <div class="swatch swatch--primary-light"></div>
-    <div>$primary-light</div>
-  </div>
-  <div>
-    <div class="swatch swatch--primary-dark"></div>
-    <div>$primary-dark</div>
-  </div>
-  <div>
-    <div class="swatch swatch--complementary-light"></div>
-    <div>$complementary-light</div>
-  </div>
-  <div>
-    <div class="swatch swatch--neutral-gray"></div>
-    <div>$neutral-gray</div>
-  </div>
-  <div>
-    <div class="swatch swatch--complementary-gray"></div>
-    <div>$complementary-gray</div>
-  </div>
-*/
-.swatch--primary-color {
-  background: #e3791c;
-}
-
-.swatch--complementary-color {
-  background: #3b84c4;
-}
-
-.swatch--analogous-color {
-  background: #3bc4a9;
-}
-
-.swatch--complementary-analogous {
-  background: #3baeb2;
-}
-
-.swatch--complementary-neutral {
-  background: #5f82a0;
-}
-
-.swatch--complementary-neutral-light {
-  background: #c9d5df;
-}
-
-.swatch--complementary-neutral-dark {
-  background: #202c36;
-}
-
-.swatch--primary-neutral {
-  background: #b57c4a;
-}
-
-.swatch--primary-neutral-light {
-  background: #e6d2c1;
-}
-
-.swatch--primary-neutral-dark {
-  background: #3e2a19;
-}
-
-.swatch--primary-light {
-  background: #e4a166;
-}
-
-.swatch--primary-dark {
-  background: #99561b;
-}
-
-.swatch--complementary-light {
-  background: #7ba8d0;
-}
-
-.swatch--white {
-  background: #fcfaf8;
-}
-
-.swatch--neutral-gray {
-  background: gray;
-}
-
-.swatch--complementary-gray {
-  background: #798086;
-}
-
-/* topdoc
 name: Typography
-description: Basic typography for the UI Kit
+description: |
+  <p>Basic responsive typography.</p>
+  <p>There are two typography breakpoints at <code>400px</code> and <code>740px</code> view-width;</p>
+  <p>There are two expected font families</p>
+  <ul>
+    <li><strong>serif</strong>: 'Roboto Slab', serif</li>
+    <li><strong>sans-serif</strong>: 'Source Sans Pro', sans-serif</li>
+  </ul>
+  <p>Add the Google Font include <code>&lt;link&gt;</code> tag to the <code>&lt;head&gt;</code> in your project.
+    <pre class="prettyprint">&lt;link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Source+Sans+Pro:400,700" rel="stylesheet"&gt;</pre></p>
+markup: |
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <p>Body</p>
 */
 :root {
   font-size: 100%;
@@ -199,8 +84,152 @@ body {
 }
 
 /* topdoc
+name: Colors
+description: Color variables/swatches. These colors are available as Sass variables that can be imported to use in your projects.
+markup: |
+  <div class="hd-grid swatches">
+    <div class="swatch-container hd-grid__2col">
+      <div class="swatch swatch--primary-color"></div>
+      <div><code>$primary-color</code></div>
+    </div>
+    <div class="swatch-container hd-grid__2col">
+      <div class="swatch swatch--complementary-color"></div>
+      <div><code>$complementary-color</code></div>
+    </div>
+    <div class="swatch-container hd-grid__2col">
+      <div class="swatch swatch--analogous-color"></div>
+      <div><code>$analogous-color</code></div>
+    </div>
+    <div class="swatch-container hd-grid__2col">
+      <div class="swatch swatch--complementary-analogous"></div>
+      <div><code>$complementary-analogous</code></div>
+    </div>
+    <div class="swatch-container hd-grid__2col">
+      <div class="swatch swatch--complementary-neutral"></div>
+      <div><code>$complementary-neutral</code></div>
+    </div>
+    <div class="swatch-container hd-grid__2col">
+      <div class="swatch swatch--complementary-neutral-light"></div>
+      <div><code>$complementary-neutral-light</code></div>
+    </div>
+    <div class="swatch-container hd-grid__2col">
+      <div class="swatch swatch--complementary-neutral-dark"></div>
+      <div><code>$complementary-neutral-dark</code></div>
+    </div>
+    <div class="swatch-container hd-grid__2col">
+      <div class="swatch swatch--primary-neutral"></div>
+      <div><code>$primary-neutral</code></div>
+    </div>
+    <div class="swatch-container hd-grid__2col">
+      <div class="swatch swatch--primary-neutral-light"></div>
+      <div><code>$primary-neutral-light</code></div>
+    </div>
+    <div class="swatch-container hd-grid__2col">
+      <div class="swatch swatch--primary-neutral-dark"></div>
+      <div><code>$primary-neutral-dark</code></div>
+    </div>
+    <div class="swatch-container hd-grid__2col">
+      <div class="swatch swatch--primary-light"></div>
+      <div><code>$primary-light</code></div>
+    </div>
+    <div class="swatch-container hd-grid__2col">
+      <div class="swatch swatch--primary-dark"></div>
+      <div><code>$primary-dark</code></div>
+    </div>
+    <div class="swatch-container hd-grid__2col">
+      <div class="swatch swatch--complementary-light"></div>
+      <div><code>$complementary-light</code></div>
+    </div>
+    <div class="swatch-container hd-grid__2col">
+      <div class="swatch swatch--neutral-gray"></div>
+      <div><code>$neutral-gray</code></div>
+    </div>
+    <div class="swatch-container hd-grid__2col">
+      <div class="swatch swatch--complementary-gray"></div>
+      <div><code>$complementary-gray</code></div>
+    </div>
+  </div>
+*/
+.swatch--primary-color {
+  background: #e3791c;
+}
+
+.swatch--complementary-color {
+  background: #3b84c4;
+}
+
+.swatch--analogous-color {
+  background: #3bc4a9;
+}
+
+.swatch--complementary-analogous {
+  background: #3baeb2;
+}
+
+.swatch--complementary-neutral {
+  background: #5f82a0;
+}
+
+.swatch--complementary-neutral-light {
+  background: #c9d5df;
+}
+
+.swatch--complementary-neutral-dark {
+  background: #202c36;
+}
+
+.swatch--primary-neutral {
+  background: #b57c4a;
+}
+
+.swatch--primary-neutral-light {
+  background: #e6d2c1;
+}
+
+.swatch--primary-neutral-dark {
+  background: #3e2a19;
+}
+
+.swatch--primary-light {
+  background: #e4a166;
+}
+
+.swatch--primary-dark {
+  background: #99561b;
+}
+
+.swatch--complementary-light {
+  background: #7ba8d0;
+}
+
+.swatch--white {
+  background: #fcfaf8;
+}
+
+.swatch--neutral-gray {
+  background: gray;
+}
+
+.swatch--complementary-gray {
+  background: #798086;
+}
+
+/* topdoc
 name: Grid
-description: Responsive Grid
+description: |
+  <p>A simple 6-column, responsive grid.</p>
+  <p>To use the grid, use the <code>.hd-grid</code> class on the container.</p>
+  <pre class="prettyprint">&lt;div class="hd-grid"&gt;&lt;/div&gt;</pre>
+  <p>Columns are defined using column classes:</p>
+  <ul>
+    <li><code>.hd-grid__1col</code></li>
+    <li><code>.hd-grid__2col</code></li>
+    <li><code>.hd-grid__3col</code></li>
+    <li><code>.hd-grid__4col</code></li>
+    <li><code>.hd-grid__5col</code></li>
+    <li><code>.hd-grid__6col</code></li>
+  </ul>
+  <p>The grid uses two breakpoints by default. It will switch to a single column grid under <code>400px</code>, and larger height above <code>740px</code> view-width.</p>
 markup: |
   <div class="hd-grid">
     <div class="hd-grid__2col">Item 1</div>
@@ -284,6 +313,17 @@ markup: |
   }
 }
 
+/* topdoc
+name: Responsive Breakpoints
+description: |
+  <p>Typography and grid components are responsive that change depending on the browser width using CSS Media Queries.</p>
+  <p>There are three breakpoints to use in your custom components, but only two breakpoints in use in the default components.</p>
+  <ul>
+    <li><strong>small</strong>: 400px</li>
+    <li><strong>medium</strong>: 740px</li>
+    <li><strong>large</strong>: 1080px</li>
+  </ul>
+*/
 /* topdoc
 name: Button
 description: Basic button

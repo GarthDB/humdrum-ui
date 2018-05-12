@@ -7,6 +7,7 @@ html(lang="en")
     link(rel='stylesheet', type='text/css', href='/css/docs.css')
     script(src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
     script(src='/js/index.js')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
   body
     header.site
       h1.logo
@@ -35,9 +36,14 @@ html(lang="en")
         each component in document.components
           .component
             h2=component.name
-            .details=component.description
-            .component-demo!=component.markup
-            div.toggleCodeSnippet <a href="#">Show markup</a>
-            pre.prettyprint.closed=component.markup
-            div.toggleCodeSnippet <a href="#">Show CSS</a>
-            pre.prettyprint.closed=component.css
+            h3 Description
+            .details!=component.description
+            - if (component.markup)
+              h3 Example
+              .component-demo!=component.markup
+            - if (component.markup)
+              h3 Code
+              div.toggleCodeSnippet <a href="#">Show markup</a>
+              pre.prettyprint.closed=component.markup
+              div.toggleCodeSnippet <a href="#">Show CSS</a>
+              pre.prettyprint.closed=component.css

@@ -3,8 +3,17 @@ body {
 }
 .swatch {
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  height: 100px;
+}
+.swatches {
+  width: 100%;
+}
+.swatch-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 header.site {
   width: 100%;
@@ -47,7 +56,6 @@ pre {
 pre.closed {
   height: 0px;
   opacity: 0;
-  position: absolute;
   pointer-events: none;
 }
 @media only screen and (min-width: 550px) {
