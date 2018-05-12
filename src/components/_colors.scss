@@ -1,9 +1,35 @@
-/* topdoc
-name: Grid
-description: Responsive Grid
-*/
-.hd-grid {
-  display: flex; }
+@import '../helpers/color_functions';
+
+//Pick a color
+// THIS IS SET IN THE THEME FILE AT THE TOP LEVEL
+// $first-color: hsl(17, 100%, 50%);
+// Find the complement
+$first-color: hsl(28, 100%, 50%);
+$second-color: complement($first-color);
+
+$primary-color: harmonious-mix($second-color, $first-color);
+$complementary-color: harmonious-mix($first-color, $second-color);
+// Analogous Colors
+$analogous-color: adjust-hue($complementary-color, -40);
+$complementary-analogous: mix($analogous-color, $complementary-color, 66);
+// Complementary Neutrals, highlight, midtone, shadow
+$complementary-neutral: mix-neutral($complementary-color);
+$complementary-neutral-light: lighten($complementary-neutral, 33);
+$complementary-neutral-dark: darken($complementary-neutral, 33);
+// Primary neutrals, highlight, midtone, shadow`
+$primary-neutral: mix-neutral($primary-color);
+$primary-neutral-light: lighten($primary-neutral, 33);
+$primary-neutral-dark: darken($primary-neutral, 33);
+// Primary tint and shade
+$primary-light: mix($primary-neutral-light, $primary-color, 45%);
+$primary-dark: mix($primary-neutral-dark, $primary-color, 45%);
+$complementary-light: mix($complementary-neutral-light, $complementary-color, 45%);
+// Pure neutrals, highlight, midtone, shadow
+$white: lighten($primary-neutral-light, 15);
+$neutral-gray: grayscale($primary-neutral);
+$primary-gray: mix($primary-color, $complementary-color, 30);
+$complementary-gray: mix($complementary-color, $primary-color, 63);
+$black: grayscale($complementary-neutral-dark);
 
 /* topdoc
 name: Colors
@@ -79,52 +105,69 @@ markup: |
   </div>
 */
 .swatch--primary-color {
-  background: #e3791c; }
+  background: $primary-color;
+}
 
 .swatch--complementary-color {
-  background: #3b84c4; }
+  background: $complementary-color;
+}
 
 .swatch--analogous-color {
-  background: #3bc4a9; }
+  background: $analogous-color;
+}
 
 .swatch--complementary-analogous {
-  background: #3baeb2; }
+  background: $complementary-analogous;
+}
 
 .swatch--complementary-neutral {
-  background: #5f82a0; }
+  background: $complementary-neutral;
+}
 
 .swatch--complementary-neutral-light {
-  background: #c9d5df; }
+  background: $complementary-neutral-light;
+}
 
 .swatch--complementary-neutral-dark {
-  background: #202c36; }
+  background: $complementary-neutral-dark;
+}
 
 .swatch--primary-neutral {
-  background: #b57c4a; }
+  background: $primary-neutral;
+}
 
 .swatch--primary-neutral-light {
-  background: #e6d2c1; }
+  background: $primary-neutral-light;
+}
 
 .swatch--primary-neutral-dark {
-  background: #3e2a19; }
+  background: $primary-neutral-dark;
+}
 
 .swatch--primary-light {
-  background: #e4a166; }
+  background: $primary-light;
+}
 
 .swatch--primary-dark {
-  background: #99561b; }
+  background: $primary-dark;
+}
 
 .swatch--complementary-light {
-  background: #7ba8d0; }
+  background: $complementary-light;
+}
 
 .swatch--white {
-  background: #fcfaf8; }
+  background: $white;
+}
 
 .swatch--neutral-gray {
-  background: gray; }
+  background: $neutral-gray;
+}
 
 .swatch--complementary-gray {
-  background: #798086; }
+  background: $complementary-gray;
+}
 
 .swatch--black {
-  background: #2b2b2b; }
+  background: $black;
+}
