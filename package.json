@@ -1,10 +1,9 @@
 {
   "name": "humdrum-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple sass based ui library.",
   "main": "index.js",
   "scripts": {
-
     "test": "ava",
     "build:sass": "node-sass ./src/index.scss -o ./dist/",
     "watch:sass": "npm run build:sass && npm run build:sass -- -w -r",
