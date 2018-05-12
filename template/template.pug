@@ -6,16 +6,18 @@ html(lang="en")
     link(rel='stylesheet', type='text/css', href=`css/${document.filename}`)
     link(rel='stylesheet', type='text/css', href='css/docs.css')
   body
-    head
-      h1=document.title
-      nav: ul
-        each file in document.files
-          if file.current
-            li.current=file.title
-          else if file.first
-            li: a(href='index.html')=file.title
-          else
-            li: a(href=`${file.filename}`)=file.title
+    header.site
+      h1.logo
+        img(src='img/hd-logo.svg', alt=document.title)
+      h2 A simple CSS library.
+    nav: ul
+      each file in document.files
+        if file.current
+          li.current=file.title
+        else if file.first
+          li: a(href='index.html')=file.title
+        else
+          li: a(href=`${file.filename}`)=file.title
 
 
     .components

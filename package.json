@@ -4,14 +4,16 @@
   "description": "A simple sass based ui library.",
   "main": "index.js",
   "scripts": {
+
     "test": "ava",
     "build:sass": "node-sass ./src/index.scss -o ./dist/",
     "watch:sass": "npm run build:sass && npm run build:sass -- -w -r",
-    "build:docs": "topdoc -t ./template -d ./docs ./dist/index.css",
-    "watch:docs": "npm run build:docs && watch -p './dist/*' -p './template/*' -c 'npm run build:docs'",
+    "build:docs": "topdoc --project 'HumdrumUI' -t ./template -d ./docs ./dist/index.css",
+    "watch:docs": "npm run build:docs && watch -p './dist/**/*.*' -p './template/**/*.*' -c 'npm run build:docs'",
     "browsersync": "browser-sync start --server 'docs' --files 'docs'",
     "watch": "npm run watch:sass & npm run watch:docs & npm run browsersync",
     "build": "npm run build:sass && npm run build:docs",
+    "prepare": "npm run build",
     "start": "npm run watch"
   },
   "repository": {
