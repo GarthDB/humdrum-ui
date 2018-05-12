@@ -1,0 +1,33 @@
+{
+  "name": "humdrum-ui",
+  "version": "1.0.0",
+  "description": "A simple sass based ui library.",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava",
+    "build:sass": "node-sass ./src/index.scss -o ./dist/",
+    "watch:sass": "npm run build:sass -- -w",
+    "build:docs": "topdoc -d ./docs ./dist/index.css",
+    "build": "npm run build:sass && npm run build:docs",
+    "start": "npm run watch:sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/GarthDB/humdrum-ui.git"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/GarthDB/humdrum-ui/issues"
+  },
+  "homepage": "https://github.com/GarthDB/humdrum-ui#readme",
+  "devDependencies": {
+    "sass-lint": "^1.12.1",
+    "ava": "^0.25.0",
+    "node-sass": "^4.9.0",
+    "topdoc": "^1.1.3"
+  }
+}
