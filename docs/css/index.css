@@ -1,81 +1,66 @@
 /* topdoc
-name: Grid
-description: Responsive Grid
-*/
-.hd-grid {
-  display: flex; }
-
-/* topdoc
 name: Colors
 description: Color variables/swatches.
 markup: |
   <div>
-    <div class="swatch--primary-color"></div>
+    <div class="swatch swatch--primary-color"></div>
     <div>$primary-color</div>
   </div>
   <div>
-    <div class="swatch--complementary-color"></div>
+    <div class="swatch swatch--complementary-color"></div>
     <div>$complementary-color</div>
   </div>
   <div>
-    <div class="swatch--analogous-color"></div>
+    <div class="swatch swatch--analogous-color"></div>
     <div>$analogous-color</div>
   </div>
   <div>
-    <div class="swatch--complementary-analogous"></div>
+    <div class="swatch swatch--complementary-analogous"></div>
     <div>$complementary-analogous</div>
   </div>
   <div>
-    <div class="swatch--complementary-neutral"></div>
+    <div class="swatch swatch--complementary-neutral"></div>
     <div>$complementary-neutral</div>
   </div>
   <div>
-    <div class="swatch--complementary-neutral-light"></div>
+    <div class="swatch swatch--complementary-neutral-light"></div>
     <div>$complementary-neutral-light</div>
   </div>
   <div>
-    <div class="swatch--complementary-neutral-dark"></div>
+    <div class="swatch swatch--complementary-neutral-dark"></div>
     <div>$complementary-neutral-dark</div>
   </div>
   <div>
-    <div class="swatch--primary-neutral"></div>
+    <div class="swatch swatch--primary-neutral"></div>
     <div>$primary-neutral</div>
   </div>
   <div>
-    <div class="swatch--primary-neutral-light"></div>
+    <div class="swatch swatch--primary-neutral-light"></div>
     <div>$primary-neutral-light</div>
   </div>
   <div>
-    <div class="swatch--primary-neutral-dark"></div>
+    <div class="swatch swatch--primary-neutral-dark"></div>
     <div>$primary-neutral-dark</div>
   </div>
   <div>
-    <div class="swatch--primary-light"></div>
+    <div class="swatch swatch--primary-light"></div>
     <div>$primary-light</div>
   </div>
   <div>
-    <div class="swatch--primary-dark"></div>
+    <div class="swatch swatch--primary-dark"></div>
     <div>$primary-dark</div>
   </div>
   <div>
-    <div class="swatch--complementary-light"></div>
+    <div class="swatch swatch--complementary-light"></div>
     <div>$complementary-light</div>
   </div>
   <div>
-    <div class="swatch--white"></div>
-    <div>$white</div>
-  </div>
-  <div>
-    <div class="swatch--neutral-gray"></div>
+    <div class="swatch swatch--neutral-gray"></div>
     <div>$neutral-gray</div>
   </div>
   <div>
-    <div class="swatch--complementary-gray"></div>
+    <div class="swatch swatch--complementary-gray"></div>
     <div>$complementary-gray</div>
-  </div>
-  <div>
-    <div class="swatch--black"></div>
-    <div>$black</div>
   </div>
 */
 .swatch--primary-color {
@@ -126,5 +111,278 @@ markup: |
 .swatch--complementary-gray {
   background: #798086; }
 
-.swatch--black {
-  background: #2b2b2b; }
+/* topdoc
+name: Typography
+description: Basic typography for the UI Kit
+*/
+:root {
+  font-size: 100%; }
+  @media only screen and (min-width: 740px) {
+    :root {
+      font-size: 112.5%; } }
+
+h1 {
+  font-size: 1.8rem;
+  line-height: 1.25;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700; }
+  @media only screen and (min-width: 740px) {
+    h1 {
+      font-size: 2rem;
+      line-height: 1.05; } }
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.15;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700; }
+  @media only screen and (min-width: 740px) {
+    h2 {
+      font-size: 1.75rem;
+      line-height: 1.25; } }
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.14;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700; }
+  @media only screen and (min-width: 740px) {
+    h3 {
+      font-size: 1rem;
+      line-height: 1.25;
+      text-transform: uppercase;
+      font-family: 'Source Sans Pro', sans-serif; } }
+
+body {
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: 'Source Sans Pro', sans-serif; }
+  @media only screen and (min-width: 740px) {
+    body {
+      font-size: 1rem;
+      line-height: 1.375; } }
+
+/* topdoc
+name: Grid
+description: Responsive Grid
+markup: |
+  <div class="hd-grid">
+    <div class="hd-grid__2col">Item 1</div>
+    <div class="hd-grid__2col">Item 2</div>
+    <div class="hd-grid__2col">Item 3</div>
+    <div class="hd-grid__1col">Item 1</div>
+    <div class="hd-grid__5col">Item 2</div>
+    <div class="hd-grid__4col">Item 1</div>
+    <div class="hd-grid__2col">Item 2</div>
+  </div>
+*/
+.hd-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(60px, auto);
+  grid-gap: 10px;
+  margin: 0 auto; }
+
+.hd-grid > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(121, 128, 134, 0.4);
+  border-radius: 3px; }
+
+.hd-grid__1col {
+  grid-column: span 1; }
+
+.hd-grid__2col {
+  grid-column: span 1; }
+
+.hd-grid__3col {
+  grid-column: span 1; }
+
+.hd-grid__4col {
+  grid-column: span 1; }
+
+.hd-grid__5col {
+  grid-column: span 1; }
+
+.hd-grid__6col {
+  grid-column: span 1; }
+
+@media only screen and (min-width: 401px) {
+  .hd-grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(100px, auto); }
+  .hd-grid__1col {
+    grid-column: span 1; }
+  .hd-grid__2col {
+    grid-column: span 2; }
+  .hd-grid__3col {
+    grid-column: span 3; }
+  .hd-grid__4col {
+    grid-column: span 4; }
+  .hd-grid__5col {
+    grid-column: span 5; }
+  .hd-grid__6col {
+    grid-column: span 6; } }
+
+@media only screen and (min-width: 740px) {
+  .hd-grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(150px, auto); } }
+
+/* topdoc
+name: Button
+description: Basic button
+markup: |
+  <button class="hd-button">Click Me</button>
+*/
+.hd-button {
+  color: #202c36;
+  font-weight: 400;
+  font-size: 16px;
+  background: #e6d2c1;
+  border: 1px solid #e6d2c1;
+  border-radius: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  height: 40px;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: 'Source Sans Pro', sans-serif; }
+  @media only screen and (min-width: 740px) {
+    .hd-button {
+      font-size: 1rem;
+      line-height: 1.375; } }
+  .hd-button:hover {
+    background: #e4a166;
+    border: 1px solid #e4a166; }
+  .hd-button:active {
+    background: #99561b;
+    border: 1px solid #99561b;
+    color: #e6d2c1; }
+  .hd-button:focus {
+    outline: none; }
+
+/* topdoc
+name: List
+description: Basic List
+markup: |
+  <ul class="hd-list-group">
+    <li class="hd-list-group__item">Item 1</li>
+    <li class="hd-list-group__item">Item 2</li>
+    <li class="hd-list-group__item">Another item</li>
+    <li class="hd-list-group__item">Last item</li>
+  </ul>
+*/
+.hd-list-group {
+  list-style: none;
+  border: 1px solid rgba(121, 128, 134, 0.4);
+  display: inline-block;
+  border-radius: 3px;
+  padding: 3px 0; }
+
+.hd-list-group__item {
+  border-bottom: 1px solid rgba(121, 128, 134, 0.4);
+  padding: 6px 20px; }
+  .hd-list-group__item:last-child {
+    border-bottom: none; }
+
+/* topdoc
+name: Navigation
+description: Site navigation
+markup: |
+  <input type="checkbox" id="menuCheckbox" class="hd-nav__checkbox">
+  <nav class="hd-nav">
+    <label for="menuCheckbox">
+      <header id="nav-expander" class="hd-nav__hamburger">
+        <svg class="hd-nav__hamburger-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" enable-background="new 0 0 18 18" width="18" height="18">
+          <rect x="1" y="3" width="16" height="2"/>
+          <rect x="1" y="8" width="16" height="2"/>
+          <rect x="1" y="13" width="16" height="2"/>
+        </svg>
+        <span>Menu</span>
+      </header>
+    </label>
+    <ul class="hd-nav__list">
+      <li class="hd-nav__item"><a class="hd-nav__link" href="#">Home</a></li>
+      <li class="hd-nav__item"><a class="hd-nav__link" href="#">FAQs</a></li>
+      <li class="hd-nav__item"><a class="hd-nav__link" href="#">Contact Us</a></li>
+    </ul>
+  </nav>
+*/
+#menuCheckbox {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none; }
+
+.hd-nav {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 67.5rem;
+  margin: 0 auto;
+  box-shadow: 0 2px 2px 0 rgba(32, 44, 54, 0.25); }
+  .hd-nav a {
+    text-decoration: underline;
+    color: #202c36; }
+    .hd-nav a:hover {
+      text-decoration: none; }
+
+.hd-nav__checkbox + .hd-nav rect {
+  transform: rotate(0) translate(0, 0);
+  transform-origin: center;
+  transition: transform .5s; }
+
+.hd-nav__checkbox:checked + .hd-nav rect:nth-child(1) {
+  transform: rotate(-45deg) translate(0, 5px); }
+
+.hd-nav__checkbox:checked + .hd-nav rect:nth-child(2) {
+  transform: rotate(45deg); }
+
+.hd-nav__checkbox:checked + .hd-nav rect:nth-child(3) {
+  transform: rotate(-45deg) translate(0, -5px); }
+
+.hd-nav__checkbox:checked + .hd-nav .hd-nav__list {
+  height: 5.2rem; }
+
+.hd-nav__hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: .5rem; }
+  .hd-nav__hamburger svg {
+    margin-right: 0.25rem; }
+
+.hd-nav__list {
+  display: block;
+  transition: height .5s;
+  margin: 0;
+  padding: 0 1rem;
+  height: 0;
+  overflow: hidden;
+  list-style: none; }
+  .hd-nav__list li {
+    margin: 0 .625rem; }
+
+@media only screen and (min-width: 401px) {
+  .hd-nav {
+    box-shadow: none; }
+    .hd-nav::before {
+      position: absolute;
+      left: 50%;
+      z-index: -1;
+      margin-left: -50vw;
+      background: #c9d5df;
+      width: 100vw;
+      height: 100%;
+      content: ''; }
+    .hd-nav label {
+      display: none; }
+  .hd-nav__hamburger {
+    display: none; }
+  .hd-nav__list {
+    display: flex;
+    justify-content: center;
+    padding: .625rem 0;
+    height: auto; } }

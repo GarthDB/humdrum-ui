@@ -1,107 +1,66 @@
-@import '../helpers/color_functions';
-
-//Pick a color
-// THIS IS SET IN THE THEME FILE AT THE TOP LEVEL
-// $first-color: hsl(17, 100%, 50%);
-// Find the complement
-$first-color: hsl(28, 100%, 50%);
-$second-color: complement($first-color);
-
-$primary-color: harmonious-mix($second-color, $first-color);
-$complementary-color: harmonious-mix($first-color, $second-color);
-// Analogous Colors
-$analogous-color: adjust-hue($complementary-color, -40);
-$complementary-analogous: mix($analogous-color, $complementary-color, 66);
-// Complementary Neutrals, highlight, midtone, shadow
-$complementary-neutral: mix-neutral($complementary-color);
-$complementary-neutral-light: lighten($complementary-neutral, 33);
-$complementary-neutral-dark: darken($complementary-neutral, 33);
-// Primary neutrals, highlight, midtone, shadow`
-$primary-neutral: mix-neutral($primary-color);
-$primary-neutral-light: lighten($primary-neutral, 33);
-$primary-neutral-dark: darken($primary-neutral, 33);
-// Primary tint and shade
-$primary-light: mix($primary-neutral-light, $primary-color, 45%);
-$primary-dark: mix($primary-neutral-dark, $primary-color, 45%);
-$complementary-light: mix($complementary-neutral-light, $complementary-color, 45%);
-// Pure neutrals, highlight, midtone, shadow
-$white: lighten($primary-neutral-light, 15);
-$neutral-gray: grayscale($primary-neutral);
-$primary-gray: mix($primary-color, $complementary-color, 30);
-$complementary-gray: mix($complementary-color, $primary-color, 63);
-$black: grayscale($complementary-neutral-dark);
-
 /* topdoc
 name: Colors
 description: Color variables/swatches.
 markup: |
   <div>
-    <div class="swatch--primary-color"></div>
+    <div class="swatch swatch--primary-color"></div>
     <div>$primary-color</div>
   </div>
   <div>
-    <div class="swatch--complementary-color"></div>
+    <div class="swatch swatch--complementary-color"></div>
     <div>$complementary-color</div>
   </div>
   <div>
-    <div class="swatch--analogous-color"></div>
+    <div class="swatch swatch--analogous-color"></div>
     <div>$analogous-color</div>
   </div>
   <div>
-    <div class="swatch--complementary-analogous"></div>
+    <div class="swatch swatch--complementary-analogous"></div>
     <div>$complementary-analogous</div>
   </div>
   <div>
-    <div class="swatch--complementary-neutral"></div>
+    <div class="swatch swatch--complementary-neutral"></div>
     <div>$complementary-neutral</div>
   </div>
   <div>
-    <div class="swatch--complementary-neutral-light"></div>
+    <div class="swatch swatch--complementary-neutral-light"></div>
     <div>$complementary-neutral-light</div>
   </div>
   <div>
-    <div class="swatch--complementary-neutral-dark"></div>
+    <div class="swatch swatch--complementary-neutral-dark"></div>
     <div>$complementary-neutral-dark</div>
   </div>
   <div>
-    <div class="swatch--primary-neutral"></div>
+    <div class="swatch swatch--primary-neutral"></div>
     <div>$primary-neutral</div>
   </div>
   <div>
-    <div class="swatch--primary-neutral-light"></div>
+    <div class="swatch swatch--primary-neutral-light"></div>
     <div>$primary-neutral-light</div>
   </div>
   <div>
-    <div class="swatch--primary-neutral-dark"></div>
+    <div class="swatch swatch--primary-neutral-dark"></div>
     <div>$primary-neutral-dark</div>
   </div>
   <div>
-    <div class="swatch--primary-light"></div>
+    <div class="swatch swatch--primary-light"></div>
     <div>$primary-light</div>
   </div>
   <div>
-    <div class="swatch--primary-dark"></div>
+    <div class="swatch swatch--primary-dark"></div>
     <div>$primary-dark</div>
   </div>
   <div>
-    <div class="swatch--complementary-light"></div>
+    <div class="swatch swatch--complementary-light"></div>
     <div>$complementary-light</div>
   </div>
   <div>
-    <div class="swatch--white"></div>
-    <div>$white</div>
-  </div>
-  <div>
-    <div class="swatch--neutral-gray"></div>
+    <div class="swatch swatch--neutral-gray"></div>
     <div>$neutral-gray</div>
   </div>
   <div>
-    <div class="swatch--complementary-gray"></div>
+    <div class="swatch swatch--complementary-gray"></div>
     <div>$complementary-gray</div>
-  </div>
-  <div>
-    <div class="swatch--black"></div>
-    <div>$black</div>
   </div>
 */
 .swatch--primary-color {
@@ -166,8 +125,4 @@ markup: |
 
 .swatch--complementary-gray {
   background: $complementary-gray;
-}
-
-.swatch--black {
-  background: $black;
 }

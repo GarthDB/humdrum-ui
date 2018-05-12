@@ -1,0 +1,24 @@
+/* topdoc
+name: Typography
+description: Basic typography for the UI Kit
+*/
+
+:root {
+  @include type-decls(#{&});
+}
+
+h1 {
+  @include type-decls(#{&});
+}
+
+h2 {
+  @include type-decls(#{&});
+}
+
+h3 {
+  @include type-decls(#{&});
+}
+
+body {
+  @include type-decls(#{&});
+}

@@ -1,0 +1,31 @@
+/* topdoc
+name: Button
+description: Basic button
+markup: |
+  <button class="hd-button">Click Me</button>
+*/
+
+.hd-button {
+  color: $complementary-neutral-dark;
+  font-weight: 400;
+  font-size: 16px;
+  background: $primary-neutral-light;
+  border: 1px solid $primary-neutral-light;
+  border-radius: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  height: 40px;
+  @include type-decls('body');
+  &:hover {
+    background: $primary-light;
+    border: 1px solid $primary-light;
+  }
+  &:active {
+    background: $primary-dark;
+    border: 1px solid $primary-dark;
+    color: $primary-neutral-light;
+  }
+  &:focus {
+    outline: none;
+  }
+}

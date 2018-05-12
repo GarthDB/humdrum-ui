@@ -1,0 +1,25 @@
+/* topdoc
+name: List
+description: Basic List
+markup: |
+  <ul class="hd-list-group">
+    <li class="hd-list-group__item">Item 1</li>
+    <li class="hd-list-group__item">Item 2</li>
+    <li class="hd-list-group__item">Another item</li>
+    <li class="hd-list-group__item">Last item</li>
+  </ul>
+*/
+.hd-list-group {
+  list-style: none;
+  border: 1px solid adjust-color($complementary-gray, $alpha: -0.6);
+  display: inline-block;
+  border-radius: 3px;
+  padding: 3px 0;
+}
+.hd-list-group__item {
+  border-bottom: 1px solid adjust-color($complementary-gray, $alpha: -0.6);
+  padding: 6px 20px;
+  &:last-child {
+    border-bottom: none;
+  }
+}
