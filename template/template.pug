@@ -3,29 +3,41 @@ html(lang="en")
   head
     title=document.title
     link(href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Source+Sans+Pro:400,700", rel="stylesheet")
-    link(rel='stylesheet', type='text/css', href=`css/${document.filename}`)
-    link(rel='stylesheet', type='text/css', href='css/docs.css')
+    link(rel='stylesheet', type='text/css', href=`/css/${document.filename}`)
+    link(rel='stylesheet', type='text/css', href='/css/docs.css')
+    script(src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
+    script(src='/js/index.js')
   body
     header.site
       h1.logo
-        img(src='img/hd-logo.svg', alt=document.title)
+        img(src='/img/hd-logo.svg', alt=document.title)
       h2 A simple CSS library.
-    nav: ul
-      each file in document.files
-        if file.current
-          li.current=file.title
-        else if file.first
-          li: a(href='index.html')=file.title
-        else
-          li: a(href=`${file.filename}`)=file.title
+      div Download <a href="https://github.com/GarthDB/humdrum-ui/releases/latest">latest release.</a>
+    input#menuCheckbox.hd-nav__checkbox(type="checkbox")
+    nav.hd-nav
+      label(for="menuCheckbox")
+        header#nav-expander.hd-nav__hamburger
+          svg.hd-nav__hamburger-icon(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 18 18" enable-background="new 0 0 18 18" width="18" height="18")
+            rect(x="1" y="3" width="16" height="2")
+            rect(x="1" y="8" width="16" height="2")
+            rect(x="1" y="13" width="16" height="2")
+          span Menu
+      ul.hd-nav__list
+        li.hd-nav__item
+          a.hd-nav__link(href="/") Getting Started
+        li.hd-nav__item
+          a.hd-nav__link(href="/docs/") Docs
+        li.hd-nav__item
+          a.hd-nav__link(href="/example/") Example
 
-
-    .components
-      each component in document.components
-        .component
-          h2=component.name
-          .details=component.description
-          .component-demo!=component.markup
-          pre.html=component.markup
-          pre.css
-            code=component.css
+    main.site
+      .components
+        each component in document.components
+          .component
+            h2=component.name
+            .details=component.description
+            .component-demo!=component.markup
+            div.toggleCodeSnippet <a href="#">Show markup</a>
+            pre.prettyprint.closed=component.markup
+            div.toggleCodeSnippet <a href="#">Show CSS</a>
+            pre.prettyprint.closed=component.css

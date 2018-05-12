@@ -70,7 +70,7 @@ function defaultTemplate(topDocument) {
     var cssDestination = _path2.default.resolve(topDocument.destination, 'css', topDocument.filename);
     _fsExtra2.default.copySync(topDocument.source, cssDestination);
     var newFileName = topDocument.first ? 'index.html' : _replaceExt(topDocument.filename, '.html');
-    _fsExtra2.default.writeFileSync(_path2.default.resolve(topDocument.destination, newFileName), content);
+    _fsExtra2.default.writeFileSync(_path2.default.resolve(topDocument.destination, 'docs', newFileName), content);
     console.log(_path2.default.relative(process.cwd(), _path2.default.resolve(topDocument.destination, newFileName)));
   } catch (err) {
     console.log(err);

@@ -31,7 +31,20 @@ header.site h2 {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
-
+a {
+  color: #3b84c4;
+}
+main.site {
+  width: 100%;
+  max-width: 750px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+pre.closed {
+  height: 0;
+  opacity: 0;
+}
 @media only screen and (min-width: 550px) {
   header.site {
     height: 600px;

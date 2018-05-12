@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "ava",
-    "build:sass": "node-sass ./src/index.scss -o ./dist/",
+    "build:sass": "node-sass ./src/index.scss -o ./dist/ --output-style expanded",
     "watch:sass": "npm run build:sass && npm run build:sass -- -w -r",
     "build:docs": "topdoc --project 'HumdrumUI' -t ./template -d ./docs ./dist/index.css",
     "watch:docs": "npm run build:docs && watch -p './dist/**/*.*' -p './template/**/*.*' -c 'npm run build:docs'",
