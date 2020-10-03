@@ -29,12 +29,16 @@
   },
   "homepage": "https://github.com/GarthDB/humdrum-ui#readme",
   "devDependencies": {
-    "ava": "^3.12.1",
+    "ava": "^3.13.0",
     "browser-sync": "^2.26.12",
     "node-sass": "^4.14.1",
     "postcss": "^8.1.1",
     "sass-lint": "^1.13.1",
+    "style-dictionary": "^2.10.1",
     "topdoc": "^2.0.4",
-    "watch-cli": "^0.2.3"
+    "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "@prettier/plugin-pug": "^1.7.0"
   }
 }
